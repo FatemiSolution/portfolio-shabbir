@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shabbir's Portfolio</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://unpkg.com/typed.js@2.0.16/dist/typed.umd.js"></script>
+</head>
+<body>
+    <div id="header">
+        <div class="container">
+            <nav>
+                <div>
+
+                   <span>Sh</span>abbir
+                </div>
+                
+                    <ul>
+                        <li><a href="#">Home</a></li>
+                        <li><a href="#">About</a></li>
+                        <li><a href="#">Services</a></li>
+                        <li><a href="#">Portfolio</a></li>
+                        <li><a href="#">Contact</a></li>
+                    </ul>
+               
+            </nav>
+            <div class="header-Text">
+                <p><span id="element"></span></p>
+                <h1>Hi, I'm <span>Shabbir</span><br>Aliasgher from Pakistan</h1>
+            </div>
+        </div>
+    </div>
+    <!-- About -->
+    <div id="about">
+        <div class="container">
+            <div class="row">
+                <div class="about-col-1">
+                    <img src="images/user.jpg" alt="">
+                </div>
+                <div class="about-col-2">
+                    <h1 class="subtitle">About Me</h1>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi mollitia nihil nobis consequuntur esse. Quod rem culpa, molestias suscipit est, repellat sit, neque veritatis at iure magnam voluptas repudiandae nostrum natus facilis. Perferendis veniam debitis, similique tenetur quis nemo recusandae esse ullam voluptatum iste, numquam exercitationem sequi, voluptatem adipisci omnis?</p>
+                    <div class="tab-title">
+                        <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
+                        <p class="tab-links" onclick="opentab('Experience')">Experience</p>
+                        <p class="tab-links" onclick="opentab('Academics')">Academics</p>
+                        <p class="tab-links" onclick="opentab('Software')">Software Skills</p>
+                    </div>
+                    <div class="tab-content active-content" id="skills">
+                        <ul>
+                            <li><span>UI/UX</span><br>Designing Web/App Interfaces</li>
+                            <li><span>Web Developmentt</span><br>expertised in creating pixel perfect web Interfaces</li>
+                            <li><span>App Development</span><br>expertised in creating pixel perfect Android Apps</li>
+                        </ul>
+                    </div>
+                    <div class="tab-content" id="Experience">
+                        <ul>
+                            <li><span>2023-current</span><br>Freelancing</li>
+                            <li><span>2022-2023</span><br>Business development officer</li>
+                            <li><span>2020-2022</span><br>IT manager</li>
+                        </ul>
+                    </div>
+                    <div class="tab-content" id="Academics">
+                        <ul>
+                            <li><span>current</span><br>Web Frontend development Training at apna College</li>
+                            <li><span>2023</span><br>Android App development Training at Ws-cube Tech</li>
+                            <li><span>2022</span><br>I.com</li>
+                        </ul>
+                    </div>
+                    <div class="tab-content " id="Software">
+                        <ul>
+                            <div>
+                                <li><img src="images/bootstrap.png" alt=""></li>
+                                <li><img src="images/css.png" alt=""></li>
+                                <li><img src="images/illustrator.png" alt=""></li>
+                            </div>
+                            <div>
+                                <li><img src="images/html.png" alt=""></li>
+                                <li><img src="images/node.png" alt=""></li>
+                                <li><img src="images/react.png" alt=""></li>
+                            </div>
+                            <div>
+                                <li><img src="images/mongo.png" alt=""></li>
+                                <li><img src="images/java.png" alt=""></li>
+                                <li><img src="images/javascript.png" alt=""></li>
+                            </div>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+        var typed = new Typed('#element', {
+          strings: ['Web Developer', 'Android Developer','Web Designer','Application Designer','UI/UX Designer'],
+          typeSpeed: 100,
+          loop: true,
+        });
+        let tablinks = document.getElementsByClassName('tab-links');
+        let tabContents = document.getElementsByClassName('tab-content');
+        function opentab(element){
+            for (tablink of tablinks){
+                tablink.classList.remove('active-link');
+            }
+            for (tabContent of tabContents){
+                tabContent.classList.remove('active-content');
+            }
+            event.currentTarget.classList.add('active-link');
+            document.getElementById(element).classList.add('active-content');
+        }
+      </script>
+</body>
+</html>
